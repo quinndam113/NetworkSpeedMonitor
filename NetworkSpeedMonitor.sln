@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkSpeedMonitor", "NetworkSpeedMonitor\NetworkSpeedMonitor.csproj", "{A247E7E8-6463-41C9-81E9-442EDBDE697F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A247E7E8-6463-41C9-81E9-442EDBDE697F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A247E7E8-6463-41C9-81E9-442EDBDE697F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A247E7E8-6463-41C9-81E9-442EDBDE697F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A247E7E8-6463-41C9-81E9-442EDBDE697F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BD00314-BDE8-4A3F-9C91-3897EA8EC219}
+	EndGlobalSection
+EndGlobal

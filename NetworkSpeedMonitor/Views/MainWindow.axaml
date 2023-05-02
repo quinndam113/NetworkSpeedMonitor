@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:NetworkSpeedMonitor.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="NetworkSpeedMonitor.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+		Width="100"
+		Height="100"
+		Background="Transparent"
+		TransparencyLevelHint="Transparent"
+		TransparencyBackgroundFallback="Transparent"
+		SystemDecorations="None"
+		Topmost="True"
+		ShowInTaskbar="False"
+        Title="NetworkSpeedMonitor">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Styles>
+		<Style Selector="TextBlock.up">
+			<Setter Property="Foreground" Value="Red"></Setter>
+		</Style>
+		<Style Selector="TextBlock.down">
+			<Setter Property="Foreground" Value="Green"></Setter>
+		</Style>
+	</Window.Styles>
+	
+	<Border Padding="10">
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="5">
+			<ComboBox Items="{Binding Networks}" SelectedIndex="0">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Name}" />
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<TextBlock Classes="up" Text="{Binding UploadSpeed}"></TextBlock>
+			<TextBlock Classes="down" Text="{Binding DownloadSpeed}"></TextBlock>
+		</StackPanel>
+	</Border>
+	
+</Window>
